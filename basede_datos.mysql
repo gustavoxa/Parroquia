@@ -1,0 +1,2 @@
+/*primera tabla*/
+CREATE TABLE `parroquia`.`usuario` ( `idusuario` INT NOT NULL AUTO_INCREMENT , `usuario` VARCHAR(50) NOT NULL , `contraseña` VARCHAR(20) NOT NULL , PRIMARY KEY (`idusuario`)) ENGINE = InnoDB CHARSET=utf8mb4 COLLATE utf8mb4_spanish2_ci;
