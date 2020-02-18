@@ -1,2 +1,15 @@
 /*primera tabla*/
 CREATE TABLE `parroquia`.`usuario` ( `idusuario` INT NOT NULL AUTO_INCREMENT , `usuario` VARCHAR(50) NOT NULL , `contraseña` VARCHAR(20) NOT NULL , PRIMARY KEY (`idusuario`)) ENGINE = InnoDB CHARSET=utf8mb4 COLLATE utf8mb4_spanish2_ci;
+ALTER TABLE `usuario` ADD `cedula` INT NOT NULL AFTER `contraseña`;
+/*segunda tabla*/
+CREATE TABLE `parroquia`.`Colaboradores` ( `Cedulacolaborador` INT NOT NULL , `Primernombre` VARCHAR(50) NOT NULL , `Segundonombre` VARCHAR(50) NOT NULL , `Apellidopaterno` VARCHAR(50) NOT NULL , `Apellidomaterno` VARCHAR(50) NOT NULL , `Fechadenacimiento` DATE NOT NULL , `Correoelectronico` VARCHAR(50) NOT NULL , `Facebook` VARCHAR(50) NOT NULL , `EstadoCivil` VARCHAR(50) NOT NULL , `Profesion` VARCHAR(50) NOT NULL , `Alergia` VARCHAR(50) NOT NULL , `Tipodesangre` VARCHAR(50) NOT NULL , `Fechadeingreso` DATE NOT NULL , PRIMARY KEY (`Cedulacolaborador`)) ENGINE = InnoDB CHARSET=utf8mb4 COLLATE utf8mb4_spanish2_ci;
+/*tercera tabla*/
+CREATE TABLE `parroquia`.`Estado civil` ( `idestado` INT NOT NULL AUTO_INCREMENT , `Estado` VARCHAR(50) NOT NULL , PRIMARY KEY (`idestado`)) ENGINE = InnoDB CHARSET=utf8mb4 COLLATE utf8mb4_spanish2_ci;
+/*cuarta tabla*/
+CREATE TABLE `parroquia`.`Cargo` ( `idcargo` INT NOT NULL AUTO_INCREMENT , `Descripción` VARCHAR(50) NOT NULL , PRIMARY KEY (`idcargo`)) ENGINE = InnoDB CHARSET=utf8mb4 COLLATE utf8mb4_spanish2_ci;
+/*quinta tabla*/
+CREATE TABLE `parroquia`.`Colaborador cargo` ( `idcolaboradorcargo` INT NOT NULL AUTO_INCREMENT , `cedula` INT NOT NULL , `idcargo` INT NOT NULL , PRIMARY KEY (`idcolaboradorcargo`)) ENGINE = InnoDB;
+/*sexta tabla*/
+CREATE TABLE `parroquia`.`Estudiantes` ( `cedula estudiante` INT NOT NULL , `primer nombre` VARCHAR(50) NOT NULL , `segundo nombre` VARCHAR(50) NOT NULL , `apellido paterno` VARCHAR(50) NOT NULL , `apellido materno` VARCHAR(50) NOT NULL , `fecha de nacimiento` DATE NOT NULL , `correo electronico` VARCHAR(50) NOT NULL , `facebook` VARCHAR(50) NOT NULL , `Alergia` VARCHAR(100) NOT NULL , `tipo de sangre` VARCHAR(10) NOT NULL , PRIMARY KEY (`cedula estudiante`)) ENGINE = InnoDB CHARSET=utf8mb4 COLLATE utf8mb4_spanish2_ci;
+/*septima tabla*/
+CREATE TABLE `parroquia`.`Curso` ( `idcargo` INT NOT NULL AUTO_INCREMENT , `Curso` VARCHAR(50) NOT NULL , PRIMARY KEY (`idcargo`)) ENGINE = InnoDB CHARSET=utf8mb4 COLLATE utf8mb4_spanish2_ci;
