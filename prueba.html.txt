@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<TITLE>Variables con matrices </TITLE>
+</HEAD>
+<BODY>
+<CENTER>
+<H2> Trabajando con matrices o <I> arrays </I> </H2>
+<?php
+$matriz1[0]="cougar";  
+$matriz1[1]="ford";
+$matriz1[2]="";
+$matriz1[3]="2.500";
+$matriz1[4]="V6";
+$matriz1[ ]=182;
+--------------
+$matriz1['modelo']="cougar";  
+$matriz1['marca']="ford";
+$matriz1['fecha']=null;
+$matriz1['cc']="2.500";
+$matriz1['motor']="V6";
+$matriz1['potencia']=182;
+?>
+
+</BODY>
+</HTML>
+
